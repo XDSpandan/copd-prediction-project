@@ -67,7 +67,7 @@ import seaborn as sns
 
 accuracy = 0.85  
 
-#accuracy plot
+
 plt.figure(figsize=(5, 4))
 plt.bar(['Accuracy'], [accuracy], color='skyblue')
 plt.ylim(0, 1)
@@ -76,7 +76,7 @@ plt.title("Model Accuracy")
 plt.savefig("accuracy_plot.png")  # Image same folder me 
 print("✅ Accuracy graph saved as accuracy_plot.png")
 
-#Feature Importance Plot 
+
 importances = model.feature_importances_
 features = X.columns  
 importances = [0.2, 0.3, 0.1, 0.15, 0.25]
