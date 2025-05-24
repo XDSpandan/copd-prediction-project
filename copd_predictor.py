@@ -8,13 +8,15 @@ data = pd.read_csv("copd_data.csv")
 
 
 X = data.drop("copd", axis=1)  # input features
-y = data["copd"]               # target column
+
+y = data["copd"]               
 
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 
 model = RandomForestClassifier()
+
 model.fit(X_train, y_train)
 
 
@@ -46,7 +48,7 @@ predict_copd()
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-#sample accuracy value 
+#sample accuracy value
 accuracy = 0.85  
 
 #accuracy plot
@@ -58,7 +60,6 @@ plt.title("Model Accuracy")
 plt.savefig("accuracy_plot.png")  # Image same folder me 
 print("✅ Accuracy graph saved as accuracy_plot.png")
 
-#Feature Importance Plot 
 importances = [0.2, 0.3, 0.1, 0.15, 0.25]
 features = ['age', 'smoking', 'cough', 'breath', 'lung']
 
@@ -70,7 +71,7 @@ plt.ylabel("Features")
 plt.savefig("feature_importance.png")  
 print("✅ Feature importance graph saved as feature_importance.png")
 
-import joblib  # Important
+import joblib 
 
 
 joblib.dump(model, "copd_model.pkl")  
