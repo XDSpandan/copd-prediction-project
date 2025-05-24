@@ -65,7 +65,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
-#sample accuracy value
 accuracy = 0.85  
 
 #accuracy plot
