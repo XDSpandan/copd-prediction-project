@@ -2,13 +2,13 @@ import streamlit as st
 import joblib
 import numpy as np
 
-# Load trained model
+
 model = joblib.load("copd_model.pkl")
 
-# Title
+
 st.title("🩺 COPD Risk Predictor")
 
-# User Input
+
 age = st.number_input("Enter your age", min_value=1, max_value=120, step=1)
 smoking_input = st.radio("Do you smoke?", ["Yes", "No"])
 smoking = 1 if smoking_input == "Yes" else 0
