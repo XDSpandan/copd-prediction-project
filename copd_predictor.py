@@ -14,7 +14,7 @@ data = pd.read_csv("copd_data.csv")
 
 X = data.drop("copd", axis=1)  
 y = data["copd"]              
-X = data.drop("copd", axis=1)  # input features
+X = data.drop("copd", axis=1)  
 
 y = data["copd"]               
 
